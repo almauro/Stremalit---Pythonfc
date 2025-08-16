@@ -69,4 +69,15 @@ try:
         'width': 700,
         'height': 400,
     })
+    
+except FileNotFoundError:
+    st.error("""
+    Error: No se encontró el archivo CSV. Por favor verifica:
+    1. Que el archivo existe en el repositorio
+    2. Que el nombre es exactamente:
+    '3 Premier League - Datos 2020-2021 - Streamlit - (DATA_Analisis).csv'
+    3. Que está en la misma carpeta que tu script
+    """)
+except Exception as e:
+    st.error(f"Ocurrió un error inesperado: {str(e)}")
 
