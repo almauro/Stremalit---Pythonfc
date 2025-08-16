@@ -69,5 +69,4 @@ try:
         'width': 700,
         'height': 400,
     })
-else:
-    st.warning("Please upload a CSV file.")
+
