@@ -3,10 +3,10 @@ import numpy as np
 import io
 import streamlit as st
 
-# Importación de datos con separador correcto
-uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
-if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file, sep=';')
+# Carga directa del archivo CSV desde el repositorio
+try:
+    # Asegúrate de que este nombre coincida EXACTAMENTE con tu archivo en GitHub
+    df = pd.read_csv("3 Premier League - Datos 2020-2021 - Streamlit - (DATA_Analisis).csv", sep=';')
     
     # Cálculo de minutos en segmentos de 90
     df['90s'] = df['minutes']/90
