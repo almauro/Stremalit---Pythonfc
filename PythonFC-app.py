@@ -27,7 +27,7 @@ try:
     teams_choice = st.sidebar.multiselect(
         "Equipos:", teams, default=teams)
     price_choice = st.sidebar.slider(
-        'Max Price:', min_value=4.0, max_value=15.0, step=.5, value=15.0)
+        'Precio máximo:', min_value=4.0, max_value=15.0, step=.5, value=15.0)
 
     # Aplicar filtros
     df = df[df['position'].isin(position_choice)]
