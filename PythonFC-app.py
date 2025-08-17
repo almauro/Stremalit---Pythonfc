@@ -35,7 +35,7 @@ try:
     df = df[df['cost'] < price_choice]
 
     # Título principal
-    st.title(f"Fantasy Football Analysis")
+    st.title(f"Análisis de los jugadores para ficharlos")
 
     # Tabla de jugadores
     st.markdown('### Player Dataframe')
