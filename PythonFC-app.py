@@ -21,11 +21,11 @@ try:
     teams = list(df['team'].drop_duplicates())
 
     # Barra lateral - títulos y filtros
-    st.sidebar.markdown('### Data Filters')
+    st.sidebar.markdown('### Filtro de datos')
     position_choice = st.sidebar.multiselect(
-        'Choose position:', positions, default=positions)
+        'Posición de jugadores:', positions, default=positions)
     teams_choice = st.sidebar.multiselect(
-        "Teams:", teams, default=teams)
+        "Equipos:", teams, default=teams)
     price_choice = st.sidebar.slider(
         'Max Price:', min_value=4.0, max_value=15.0, step=.5, value=15.0)
 
