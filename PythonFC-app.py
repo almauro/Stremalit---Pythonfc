@@ -38,12 +38,12 @@ try:
     st.title(f"Análisis de los jugadores para ficharlos")
 
     # Tabla de jugadores
-    st.markdown('### Player Dataframe')
+    st.markdown('### Base de datos de los jugadores')
     st.dataframe(df.sort_values('points',
                  ascending=False).reset_index(drop=True))
 
     # Gráfico costo vs puntos
-    st.markdown('### Cost vs 20/21 Points')
+    st.markdown('### Costo vs puntos en competencia 20/21')
     st.vega_lite_chart(df, {
         'mark': {'type': 'circle', 'tooltip': True},
         'encoding': {
@@ -57,7 +57,7 @@ try:
     })
 
     # Gráfico goles por 90 vs asistencias por 90
-    st.markdown('### Goals p90 vs Assists p90')
+    st.markdown('### Goles 90 minutos vs Asistencia 90 minutos')
     st.vega_lite_chart(df, {
         'mark': {'type': 'circle', 'tooltip': True},
         'encoding': {
