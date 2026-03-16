@@ -26,7 +26,7 @@ try:
     # --- MENÚ VISIBLE ARRIBA ---
     st.markdown("""
     <div style="background-color: #4CAF50; padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
-        <h3 style="color: white; margin: 0;">📌 MENÚ - TOCA PARA NAVEGAR</h3>
+        <h3 style="color: white; margin: 0;">📌 MENÚ - Clic para filtrar 👇👇👇</h3>
     </div>
     """, unsafe_allow_html=True)
     
