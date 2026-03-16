@@ -20,14 +20,14 @@ try:
     positions = list(df['position'].drop_duplicates())
     teams = list(df['team'].drop_duplicates())
 #=======================================================================================
-st.set_page_config(layout="wide")
-
-# --- MENÚ VISIBLE ARRIBA (Esto SÍ se ve en móvil) ---
-st.markdown("""
-<div style="background-color: #4CAF50; padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
-    <h3 style="color: white; margin: 0;">📌 MENÚ - TOCA PARA NAVEGAR</h3>
-</div>
-""", unsafe_allow_html=True)
+    st.set_page_config(layout="wide")
+    
+    # --- MENÚ VISIBLE ARRIBA (Esto SÍ se ve en móvil) ---
+    st.markdown("""
+    <div style="background-color: #4CAF50; padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+        <h3 style="color: white; margin: 0;">📌 MENÚ - TOCA PARA NAVEGAR</h3>
+    </div>
+    """, unsafe_allow_html=True)
     
     # Barra lateral - títulos y filtros
     st.sidebar.markdown('### Filtro de datos')
