@@ -21,30 +21,30 @@ try:
     teams = list(df['team'].drop_duplicates())
 #=======================================================================================
 #=======================================================================================
-st.set_page_config(layout="wide")
-
-# --- MENÚ VISIBLE ARRIBA ---
-st.markdown("""
-<div style="background-color: #4CAF50; padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
-    <h3 style="color: white; margin: 0;">📌 MENÚ - TOCA PARA NAVEGAR</h3>
-</div>
-""", unsafe_allow_html=True)
-
-# --- FILTROS EN EL ÁREA PRINCIPAL (CENTRO) ---
-# Nota: Ya no usamos 'st.sidebar', ahora usamos 'st' directamente
-st.markdown('### 🎛️ Filtro de datos')
-
-position_choice = st.multiselect(
-    'Posición de jugadores:', positions, default=positions)
-
-teams_choice = st.multiselect(
-    "Equipos:", teams, default=teams)
-
-price_choice = st.slider(
-    'Precio máximo:', min_value=4.0, max_value=15.0, step=.5, value=15.0)
-
-# --- Aquí continuaría tu lógica de datos ---
-# st.write("Datos filtrados...")
+    st.set_page_config(layout="wide")
+    
+    # --- MENÚ VISIBLE ARRIBA ---
+    st.markdown("""
+    <div style="background-color: #4CAF50; padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+        <h3 style="color: white; margin: 0;">📌 MENÚ - TOCA PARA NAVEGAR</h3>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # --- FILTROS EN EL ÁREA PRINCIPAL (CENTRO) ---
+    # Nota: Ya no usamos 'st.sidebar', ahora usamos 'st' directamente
+    st.markdown('### 🎛️ Filtro de datos')
+    
+    position_choice = st.multiselect(
+        'Posición de jugadores:', positions, default=positions)
+    
+    teams_choice = st.multiselect(
+        "Equipos:", teams, default=teams)
+    
+    price_choice = st.slider(
+        'Precio máximo:', min_value=4.0, max_value=15.0, step=.5, value=15.0)
+    
+    # --- Aquí continuaría tu lógica de datos ---
+    # st.write("Datos filtrados...")
 #=========================================================================================
 
     # Aplicar filtros
